@@ -16,9 +16,8 @@ namespace RestaurantDesktopApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RestaurantMenuForm());
-            Application.Run(new IngredientsForm
-                ());
+            Application.Run(new LandingForm());
+            //Application.Run(new IngredientsForm());
         }
     }
 }
