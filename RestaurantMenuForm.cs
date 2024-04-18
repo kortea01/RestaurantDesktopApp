@@ -157,7 +157,7 @@ namespace RestaurantDesktopApp
             var response = client.PostAsync(endPoint, data).Result;
             if (response.IsSuccessStatusCode)
             {
-                MessageBox.Show("Sikeres felvitel! Status code" + response.StatusCode);
+                MessageBox.Show("Sikeres felvitel!");
                 refreshMenu();
             }
             else
@@ -235,12 +235,12 @@ namespace RestaurantDesktopApp
             var response = client.PutAsync(endPointUpdate, data).Result;
             if (response.IsSuccessStatusCode)
             {
-                MessageBox.Show("Sikeres felvitel! Status code" + response.StatusCode);
+                MessageBox.Show("Sikeres módosítás!");
                 refreshMenu();
             }
             else
             {
-                MessageBox.Show("Sikertelen felvitel!");
+                MessageBox.Show("Sikertelen módosítás!");
             }
             OrderID.Text = string.Empty;
             textBox_Name.Text = string.Empty;

@@ -123,7 +123,7 @@ namespace RestaurantDesktopApp
             var response = client.PostAsync(endPoint, data).Result;
             if (response.IsSuccessStatusCode)
             {
-                MessageBox.Show("Sikeres felvitel! Status code" + response.StatusCode);
+                MessageBox.Show("Sikeres felvitel!");
                 refreshIngedients();
             }
             else
@@ -182,10 +182,11 @@ namespace RestaurantDesktopApp
 
             var json = JsonConvert.SerializeObject(ingredients); //-- továbbítandó adat
             var data = new StringContent(json, Encoding.UTF8, "application/json"); //-- fejlécet adtunk hozzá
-            var response = client.PutAsync(endPoint, data).Result;
+            string endPointUpdate = $"{endPoint}/{long.Parse(textBox_id.Text)}";
+            var response = client.PutAsync(endPointUpdate, data).Result;
             if (response.IsSuccessStatusCode)
             {
-                MessageBox.Show("Sikeres felvitel! Status code" + response.StatusCode);
+                MessageBox.Show("Sikeres felvitel!" );
                 refreshIngedients();
             }
             else
