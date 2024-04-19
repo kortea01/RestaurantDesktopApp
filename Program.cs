@@ -19,5 +19,8 @@ namespace RestaurantDesktopApp
             Application.Run(new LandingForm());
             //Application.Run(new IngredientsForm());
         }
+
+
     }
+
 }

@@ -34,6 +34,11 @@ namespace RestaurantDesktopApp
             IngredientsForm ingredientsForm = new IngredientsForm();
             ingredientsForm.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
