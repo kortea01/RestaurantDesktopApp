@@ -15,6 +15,7 @@ namespace RestaurantDesktopApp
         public LandingForm()
         {
             InitializeComponent();
+            menuStrip.Hide();
         }
 
         private void LandingForm_Load(object sender, EventArgs e)
@@ -38,6 +39,16 @@ namespace RestaurantDesktopApp
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+
+            //TODO: call login api, get the bearer token, check user role
+            
+            //Hide the groupbox
+            loginGroupBox.Hide();
+            menuStrip.Show();
         }
     }
 

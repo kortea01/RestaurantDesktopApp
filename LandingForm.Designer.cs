@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LandingForm));
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.userManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restaurantMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingredientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,24 +40,24 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.loginGroupBox = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.menuStrip2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.menuStrip.SuspendLayout();
+            this.loginGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip2
+            // menuStrip
             // 
-            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.userManagementToolStripMenuItem,
             this.restaurantMenuToolStripMenuItem,
             this.ingredientsToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1199, 28);
-            this.menuStrip2.TabIndex = 1;
-            this.menuStrip2.Text = "menuStrip2";
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(1199, 28);
+            this.menuStrip.TabIndex = 1;
+            this.menuStrip.Text = "menuStrip2";
             // 
             // userManagementToolStripMenuItem
             // 
@@ -102,6 +102,7 @@
             this.loginButton.TabIndex = 2;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // registerButton
             // 
@@ -152,23 +153,23 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Password";
             // 
-            // groupBox1
+            // loginGroupBox
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.groupBox1.Controls.Add(this.linkLabel1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.loginButton);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.registerButton);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Location = new System.Drawing.Point(368, 109);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(403, 246);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
+            this.loginGroupBox.BackColor = System.Drawing.Color.DarkGray;
+            this.loginGroupBox.Controls.Add(this.linkLabel1);
+            this.loginGroupBox.Controls.Add(this.label3);
+            this.loginGroupBox.Controls.Add(this.label2);
+            this.loginGroupBox.Controls.Add(this.textBox2);
+            this.loginGroupBox.Controls.Add(this.loginButton);
+            this.loginGroupBox.Controls.Add(this.label1);
+            this.loginGroupBox.Controls.Add(this.registerButton);
+            this.loginGroupBox.Controls.Add(this.textBox1);
+            this.loginGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.loginGroupBox.Location = new System.Drawing.Point(368, 109);
+            this.loginGroupBox.Name = "loginGroupBox";
+            this.loginGroupBox.Size = new System.Drawing.Size(403, 246);
+            this.loginGroupBox.TabIndex = 1;
+            this.loginGroupBox.TabStop = false;
             // 
             // label3
             // 
@@ -187,23 +188,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1199, 799);
-            this.Controls.Add(this.menuStrip2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip);
+            this.Controls.Add(this.loginGroupBox);
             this.Name = "LandingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "LandingForm";
             this.Load += new System.EventHandler(this.LandingForm_Load);
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
+            this.loginGroupBox.ResumeLayout(false);
+            this.loginGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem userManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restaurantMenuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ingredientsToolStripMenuItem;
@@ -214,7 +215,7 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox loginGroupBox;
         private System.Windows.Forms.Label label3;
     }
 }

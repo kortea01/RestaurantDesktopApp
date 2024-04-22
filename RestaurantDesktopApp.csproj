@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="User.cs" />
     <Compile Include="IngredientsForm.cs">
       <SubType>Form</SubType>
     </Compile>
