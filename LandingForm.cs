@@ -7,15 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Net.Http;
+using System.Net;
 
 namespace RestaurantDesktopApp
 {
     public partial class LandingForm : Form
     {
+        private string loginApiEndPoint = ReadSettings("endpointUrlLogin");
+        private string userApiEndPoint = ReadSettings("endpointUrlUsers");
+        private HttpClient client;
+
         public LandingForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
             menuStrip.Hide();
+            client = new HttpClient();
         }
 
         private void LandingForm_Load(object sender, EventArgs e)
@@ -41,15 +49,88 @@ namespace RestaurantDesktopApp
 
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
+        private async Task loginButton_ClickAsync(object sender, EventArgs e)
         {
 
             //TODO: call login api, get the bearer token, check user role
-            
-            //Hide the groupbox
-            loginGroupBox.Hide();
-            menuStrip.Show();
+            string username = userEmail.Text;
+            string password = userPassword.Text;
+
+            try
+            {
+                string token = await Login(username, password);                
+                if (!string.IsNullOrEmpty(token))
+                {
+                    MessageBox.Show("Login successful!");
+                    // Here you can navigate to another form or perform any other actions
+                    //Hide the groupbox
+                    loginGroupBox.Hide();
+                    menuStrip.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Login failed. Invalid username or password.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }            
+        }
+
+        private async Task<string> Login(string username, string password)
+        {
+            var loginData = new { Username = username, Password = password };
+            var content = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(loginData), Encoding.UTF8, "application/json");
+
+            using (var response = await client.PostAsync(loginApiEndPoint, content))
+            {
+                response.EnsureSuccessStatusCode();
+                var responseBody = await response.Content.ReadAsStringAsync();
+                // Assuming your API returns a token in the response
+                // Modify this according to your actual response format
+                dynamic responseData = Newtonsoft.Json.JsonConvert.DeserializeObject(responseBody);
+                return responseData.token;
+            }
+        }
+
+        // Method to get user data after successful login
+        private async Task<UserData> GetUserData(string token)
+        {
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+            using (var response = await client.GetAsync(userApiEndPoint))
+            {
+                response.EnsureSuccessStatusCode();
+                var responseBody = await response.Content.ReadAsStringAsync();
+                // Assuming your API returns user data in the response
+                // Modify this according to your actual response format
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<UserData>(responseBody);
+            }
+        }
+
+        // Define a class to represent your user data
+        private class UserData
+        {
+            // Add properties according to your user data structure
+        }
+
+        private static string ReadSettings(string keyName)
+        {
+            string result = null;
+            try
+            {
+                var value = System.Configuration.ConfigurationSettings.AppSettings;
+
+                result = value[keyName];
+            }
+            catch (ConfigurationException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return result;
         }
     }
+
+
 
 }

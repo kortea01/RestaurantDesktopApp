@@ -33,8 +33,8 @@
             this.userManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restaurantMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingredientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.userPassword = new System.Windows.Forms.TextBox();
+            this.userEmail = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
             this.registerButton = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -79,19 +79,19 @@
             this.ingredientsToolStripMenuItem.Text = "Ingredients";
             this.ingredientsToolStripMenuItem.Click += new System.EventHandler(this.ingredientsToolStripMenuItem_Click);
             // 
-            // textBox1
+            // userPassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(178, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 22);
-            this.textBox1.TabIndex = 1;
+            this.userPassword.Location = new System.Drawing.Point(178, 116);
+            this.userPassword.Name = "userPassword";
+            this.userPassword.Size = new System.Drawing.Size(168, 22);
+            this.userPassword.TabIndex = 1;
             // 
-            // textBox2
+            // userEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(178, 78);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 22);
-            this.textBox2.TabIndex = 0;
+            this.userEmail.Location = new System.Drawing.Point(178, 78);
+            this.userEmail.Name = "userEmail";
+            this.userEmail.Size = new System.Drawing.Size(168, 22);
+            this.userEmail.TabIndex = 0;
             // 
             // loginButton
             // 
@@ -102,7 +102,7 @@
             this.loginButton.TabIndex = 2;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
-            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            this.loginButton.Click += new System.EventHandler(this.loginButton_ClickAsync);
             // 
             // registerButton
             // 
@@ -159,11 +159,11 @@
             this.loginGroupBox.Controls.Add(this.linkLabel1);
             this.loginGroupBox.Controls.Add(this.label3);
             this.loginGroupBox.Controls.Add(this.label2);
-            this.loginGroupBox.Controls.Add(this.textBox2);
+            this.loginGroupBox.Controls.Add(this.userEmail);
             this.loginGroupBox.Controls.Add(this.loginButton);
             this.loginGroupBox.Controls.Add(this.label1);
             this.loginGroupBox.Controls.Add(this.registerButton);
-            this.loginGroupBox.Controls.Add(this.textBox1);
+            this.loginGroupBox.Controls.Add(this.userPassword);
             this.loginGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.loginGroupBox.Location = new System.Drawing.Point(368, 109);
             this.loginGroupBox.Name = "loginGroupBox";
@@ -208,8 +208,8 @@
         private System.Windows.Forms.ToolStripMenuItem userManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restaurantMenuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ingredientsToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox userPassword;
+        private System.Windows.Forms.TextBox userEmail;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.LinkLabel linkLabel1;
