@@ -253,7 +253,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.OrderID);
             this.panel1.Controls.Add(this.checkedListBox1);
             this.panel1.Controls.Add(this.label1);

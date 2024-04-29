@@ -148,7 +148,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.button_Create);
             this.panel1.Controls.Add(this.textBox_Allergen);
             this.panel1.Controls.Add(this.button_Reload);

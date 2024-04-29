@@ -66,6 +66,12 @@ namespace RestaurantDesktopApp
                     //Hide the groupbox
                     loginGroupBox.Hide();
                     menuStrip.Show();
+                    User user = await GetUserData(token);
+                    if (user != null)
+                    {
+                        MessageBox.Show("Welcome to BellaItalia dear " + user.FirstName + " " + user.LastName);
+                    }                   
+
                 }
                 else
                 {
@@ -95,7 +101,7 @@ namespace RestaurantDesktopApp
         }
 
         // Method to get user data after successful login
-        private async Task<UserData> GetUserData(string token)
+        private async Task<User> GetUserData(string token)
         {
             client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
             using (var response = await client.GetAsync(userApiEndPoint))
@@ -104,7 +110,8 @@ namespace RestaurantDesktopApp
                 var responseBody = await response.Content.ReadAsStringAsync();
                 // Assuming your API returns user data in the response
                 // Modify this according to your actual response format
-                return Newtonsoft.Json.JsonConvert.DeserializeObject<UserData>(responseBody);
+                dynamic responseData = Newtonsoft.Json.JsonConvert.DeserializeObject<User>(responseBody);
+                return responseData;
             }
         }
 
