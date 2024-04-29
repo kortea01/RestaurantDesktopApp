@@ -49,7 +49,7 @@ namespace RestaurantDesktopApp
 
         }
 
-        private async Task loginButton_ClickAsync(object sender, EventArgs e)
+        private async void loginButton_ClickAsync(object sender, EventArgs e)
         {
 
             //TODO: call login api, get the bearer token, check user role
@@ -80,7 +80,7 @@ namespace RestaurantDesktopApp
 
         private async Task<string> Login(string username, string password)
         {
-            var loginData = new { Username = username, Password = password };
+            var loginData = new { email = username, password = password };
             var content = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(loginData), Encoding.UTF8, "application/json");
 
             using (var response = await client.PostAsync(loginApiEndPoint, content))
