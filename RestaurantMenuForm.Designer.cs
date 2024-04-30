@@ -64,7 +64,7 @@
             // 
             // OrderID
             // 
-            this.OrderID.Location = new System.Drawing.Point(215, 50);
+            this.OrderID.Location = new System.Drawing.Point(249, 50);
             this.OrderID.Name = "OrderID";
             this.OrderID.ReadOnly = true;
             this.OrderID.Size = new System.Drawing.Size(265, 22);
@@ -76,9 +76,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(46, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.Size = new System.Drawing.Size(62, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Kategória";
+            this.label2.Text = "Category";
             // 
             // listBox_RestaurantMenu
             // 
@@ -102,7 +102,7 @@
             "tészta",
             "desszert",
             "italok"});
-            this.comboBox_Category.Location = new System.Drawing.Point(215, 87);
+            this.comboBox_Category.Location = new System.Drawing.Point(249, 87);
             this.comboBox_Category.Name = "comboBox_Category";
             this.comboBox_Category.Size = new System.Drawing.Size(265, 24);
             this.comboBox_Category.TabIndex = 5;
@@ -112,14 +112,14 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(49, 207);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 16);
+            this.label3.Size = new System.Drawing.Size(38, 16);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Ár";
+            this.label3.Text = "Price";
             // 
             // numericUpDownPrice
             // 
             this.numericUpDownPrice.DecimalPlaces = 2;
-            this.numericUpDownPrice.Location = new System.Drawing.Point(217, 201);
+            this.numericUpDownPrice.Location = new System.Drawing.Point(412, 201);
             this.numericUpDownPrice.Maximum = new decimal(new int[] {
             15000,
             0,
@@ -153,9 +153,9 @@
             "tejszín",
             "mascarpone",
             "tojás"});
-            this.ingerdientsCombo.Location = new System.Drawing.Point(214, 238);
+            this.ingerdientsCombo.Location = new System.Drawing.Point(328, 316);
             this.ingerdientsCombo.Name = "ingerdientsCombo";
-            this.ingerdientsCombo.Size = new System.Drawing.Size(265, 24);
+            this.ingerdientsCombo.Size = new System.Drawing.Size(186, 24);
             this.ingerdientsCombo.TabIndex = 9;
             this.ingerdientsCombo.SelectedIndexChanged += new System.EventHandler(this.ingerdientsCombo_SelectedIndexChanged);
             // 
@@ -166,11 +166,11 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 16);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Alapanyag";
+            this.label4.Text = "Ingredients";
             // 
             // textBox_Name
             // 
-            this.textBox_Name.Location = new System.Drawing.Point(217, 125);
+            this.textBox_Name.Location = new System.Drawing.Point(249, 125);
             this.textBox_Name.Name = "textBox_Name";
             this.textBox_Name.Size = new System.Drawing.Size(265, 22);
             this.textBox_Name.TabIndex = 11;
@@ -180,13 +180,13 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(49, 128);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 16);
+            this.label5.Size = new System.Drawing.Size(109, 16);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Étel neve";
+            this.label5.Text = "Name of the food";
             // 
             // textBox_Description
             // 
-            this.textBox_Description.Location = new System.Drawing.Point(217, 163);
+            this.textBox_Description.Location = new System.Drawing.Point(249, 163);
             this.textBox_Description.Name = "textBox_Description";
             this.textBox_Description.Size = new System.Drawing.Size(265, 22);
             this.textBox_Description.TabIndex = 13;
@@ -197,9 +197,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(49, 166);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 16);
+            this.label6.Size = new System.Drawing.Size(81, 16);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Részletesen";
+            this.label6.Text = "More details";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // button_Create
@@ -208,7 +208,7 @@
             this.button_Create.Name = "button_Create";
             this.button_Create.Size = new System.Drawing.Size(94, 38);
             this.button_Create.TabIndex = 15;
-            this.button_Create.Text = "New";
+            this.button_Create.Text = "New food";
             this.button_Create.UseVisualStyleBackColor = true;
             this.button_Create.Click += new System.EventHandler(this.button_Create_Click);
             // 
@@ -218,7 +218,7 @@
             this.button_Read.Name = "button_Read";
             this.button_Read.Size = new System.Drawing.Size(100, 38);
             this.button_Read.TabIndex = 16;
-            this.button_Read.Text = "Reload";
+            this.button_Read.Text = "Reload list";
             this.button_Read.UseVisualStyleBackColor = true;
             this.button_Read.Click += new System.EventHandler(this.button_Read_Click);
             // 
@@ -228,7 +228,7 @@
             this.button_Modify.Name = "button_Modify";
             this.button_Modify.Size = new System.Drawing.Size(100, 38);
             this.button_Modify.TabIndex = 17;
-            this.button_Modify.Text = "Modify";
+            this.button_Modify.Text = "Modify food";
             this.button_Modify.UseVisualStyleBackColor = true;
             this.button_Modify.Click += new System.EventHandler(this.button_Modify_Click);
             // 
@@ -238,14 +238,14 @@
             this.button_Delete.Name = "button_Delete";
             this.button_Delete.Size = new System.Drawing.Size(100, 38);
             this.button_Delete.TabIndex = 18;
-            this.button_Delete.Text = "Delete";
+            this.button_Delete.Text = "Delete food";
             this.button_Delete.UseVisualStyleBackColor = true;
             this.button_Delete.Click += new System.EventHandler(this.button_Delete_Click);
             // 
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(214, 284);
+            this.checkedListBox1.Location = new System.Drawing.Point(328, 238);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(186, 72);
             this.checkedListBox1.TabIndex = 19;
@@ -273,7 +273,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(338, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(557, 479);
+            this.panel1.Size = new System.Drawing.Size(602, 479);
             this.panel1.TabIndex = 20;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 

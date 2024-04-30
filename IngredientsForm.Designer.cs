@@ -61,13 +61,13 @@
             this.listBox_ingredients.ItemHeight = 16;
             this.listBox_ingredients.Location = new System.Drawing.Point(0, 0);
             this.listBox_ingredients.Name = "listBox_ingredients";
-            this.listBox_ingredients.Size = new System.Drawing.Size(278, 598);
+            this.listBox_ingredients.Size = new System.Drawing.Size(278, 645);
             this.listBox_ingredients.TabIndex = 1;
             this.listBox_ingredients.SelectedIndexChanged += new System.EventHandler(this.listBox_ingredients_SelectedIndexChanged);
             // 
             // textBox_id
             // 
-            this.textBox_id.Location = new System.Drawing.Point(190, 40);
+            this.textBox_id.Location = new System.Drawing.Point(323, 40);
             this.textBox_id.Name = "textBox_id";
             this.textBox_id.ReadOnly = true;
             this.textBox_id.Size = new System.Drawing.Size(246, 22);
@@ -75,7 +75,7 @@
             // 
             // textBox_Name
             // 
-            this.textBox_Name.Location = new System.Drawing.Point(190, 78);
+            this.textBox_Name.Location = new System.Drawing.Point(323, 78);
             this.textBox_Name.Name = "textBox_Name";
             this.textBox_Name.Size = new System.Drawing.Size(246, 22);
             this.textBox_Name.TabIndex = 4;
@@ -85,9 +85,9 @@
             this.name.AutoSize = true;
             this.name.Location = new System.Drawing.Point(41, 78);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(104, 16);
+            this.name.Size = new System.Drawing.Size(120, 16);
             this.name.TabIndex = 3;
-            this.name.Text = "Hozzávaló neve";
+            this.name.Text = "Name of ingredient";
             this.name.Click += new System.EventHandler(this.label2_Click);
             // 
             // label2
@@ -95,9 +95,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(41, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Allergének";
+            this.label2.Text = "Allergens";
             // 
             // button_Create
             // 
@@ -105,7 +105,7 @@
             this.button_Create.Name = "button_Create";
             this.button_Create.Size = new System.Drawing.Size(116, 52);
             this.button_Create.TabIndex = 7;
-            this.button_Create.Text = "New";
+            this.button_Create.Text = "New ingredient";
             this.button_Create.UseVisualStyleBackColor = true;
             this.button_Create.Click += new System.EventHandler(this.button_Create_Click);
             // 
@@ -115,23 +115,23 @@
             this.button_Reload.Name = "button_Reload";
             this.button_Reload.Size = new System.Drawing.Size(116, 52);
             this.button_Reload.TabIndex = 8;
-            this.button_Reload.Text = "Reload";
+            this.button_Reload.Text = "Reload list";
             this.button_Reload.UseVisualStyleBackColor = true;
             this.button_Reload.Click += new System.EventHandler(this.button_Reload_Click);
             // 
             // button_Modify
             // 
-            this.button_Modify.Location = new System.Drawing.Point(292, 192);
+            this.button_Modify.Location = new System.Drawing.Point(292, 193);
             this.button_Modify.Name = "button_Modify";
-            this.button_Modify.Size = new System.Drawing.Size(116, 52);
+            this.button_Modify.Size = new System.Drawing.Size(144, 52);
             this.button_Modify.TabIndex = 9;
-            this.button_Modify.Text = "Modify";
+            this.button_Modify.Text = "Modify ingredient";
             this.button_Modify.UseVisualStyleBackColor = true;
             this.button_Modify.Click += new System.EventHandler(this.button_Modify_Click);
             // 
             // button_Delete
             // 
-            this.button_Delete.Location = new System.Drawing.Point(422, 193);
+            this.button_Delete.Location = new System.Drawing.Point(453, 194);
             this.button_Delete.Name = "button_Delete";
             this.button_Delete.Size = new System.Drawing.Size(116, 52);
             this.button_Delete.TabIndex = 10;
@@ -141,7 +141,7 @@
             // 
             // textBox_Allergen
             // 
-            this.textBox_Allergen.Location = new System.Drawing.Point(190, 123);
+            this.textBox_Allergen.Location = new System.Drawing.Point(323, 123);
             this.textBox_Allergen.Name = "textBox_Allergen";
             this.textBox_Allergen.Size = new System.Drawing.Size(246, 22);
             this.textBox_Allergen.TabIndex = 11;
@@ -161,7 +161,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(303, 64);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(560, 267);
+            this.panel1.Size = new System.Drawing.Size(632, 267);
             this.panel1.TabIndex = 12;
             // 
             // IngredientsForm
@@ -170,7 +170,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(925, 598);
+            this.ClientSize = new System.Drawing.Size(1013, 645);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listBox_ingredients);
             this.Name = "IngredientsForm";

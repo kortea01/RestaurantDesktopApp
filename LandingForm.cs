@@ -136,6 +136,16 @@ namespace RestaurantDesktopApp
             }
             return result;
         }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please contact your Restaurant manager for further details");
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("This functionality is under development");
+        }
     }
 
 

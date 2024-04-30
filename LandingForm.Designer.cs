@@ -55,28 +55,29 @@
             this.ingredientsToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1199, 28);
+            this.menuStrip.Size = new System.Drawing.Size(1199, 30);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip2";
             // 
             // userManagementToolStripMenuItem
             // 
+            this.userManagementToolStripMenuItem.Enabled = false;
             this.userManagementToolStripMenuItem.Name = "userManagementToolStripMenuItem";
-            this.userManagementToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.userManagementToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.userManagementToolStripMenuItem.Text = "User management";
             // 
             // restaurantMenuToolStripMenuItem
             // 
             this.restaurantMenuToolStripMenuItem.Name = "restaurantMenuToolStripMenuItem";
-            this.restaurantMenuToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
-            this.restaurantMenuToolStripMenuItem.Text = "Restaurant menu";
+            this.restaurantMenuToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
+            this.restaurantMenuToolStripMenuItem.Text = "Manage restaurant menu";
             this.restaurantMenuToolStripMenuItem.Click += new System.EventHandler(this.restaurantMenuToolStripMenuItem_Click);
             // 
             // ingredientsToolStripMenuItem
             // 
             this.ingredientsToolStripMenuItem.Name = "ingredientsToolStripMenuItem";
-            this.ingredientsToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
-            this.ingredientsToolStripMenuItem.Text = "Ingredients";
+            this.ingredientsToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
+            this.ingredientsToolStripMenuItem.Text = "Manage ingredients";
             this.ingredientsToolStripMenuItem.Click += new System.EventHandler(this.ingredientsToolStripMenuItem_Click);
             // 
             // userPassword
@@ -114,6 +115,7 @@
             this.registerButton.TabIndex = 3;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // linkLabel1
             // 
@@ -128,6 +130,7 @@
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Forgot your password";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label1
             // 
