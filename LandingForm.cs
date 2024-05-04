@@ -21,8 +21,8 @@ namespace RestaurantDesktopApp
 
         public LandingForm()
         {
-            InitializeComponent();            
-            menuStrip.Hide();
+            InitializeComponent();
+            menuStrip.Hide();            
             client = new HttpClient();
         }
 
@@ -145,6 +145,11 @@ namespace RestaurantDesktopApp
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("This functionality is under development");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
